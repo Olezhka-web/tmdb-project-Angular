@@ -1,0 +1,17 @@
+
+.section__movie-list--light{
+  background: #f0efee;
+}
+
+.section__movie-list--dark{
+  background: black;
+}
+
+.wrapper-section{
+  max-width: 1024px;
+  margin: 0 auto;
+  column-count: 4;
+  column-gap: 0;
+  position: relative;
+  padding-top: 50px;
+}

@@ -1,0 +1,42 @@
+a{
+  text-decoration: none;
+}
+
+.pages__container-light{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page__link-light{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.page__link-light .page{
+  color: black;
+  padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.page__link-dark .page{
+  color: white;
+  padding: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.page__link-light .current-page{
+  padding: 5px;
+  cursor: pointer;
+  color: black;
+  border: 1px solid red;
+}
+
+.page__link-dark .current-page{
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid red;
+}

@@ -1,0 +1,7 @@
+<div class="pages__container-light">
+  <div class="page__link-light" *ngFor="let page of pages">
+    <a routerLink="/movies/page/{{page}}" (click)="changePaginationNumber(page)">
+      <span class="{{page === currentPage ? 'current-page' : 'page'}}">{{page}}</span>
+    </a>
+  </div>
+</div>

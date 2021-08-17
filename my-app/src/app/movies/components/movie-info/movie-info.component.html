@@ -1,0 +1,24 @@
+<div class="movie__list-item">
+  <img src='{{"https://image.tmdb.org/t/p/w500/" + movie.poster_path}}' alt="movie-icon" style="width: 100%; height: 245px"/>
+  <div class="list__item-container">
+    <div class="list__item-title">{{movie.title}}</div>
+    <div class="list__item-genres">
+      <div>
+        <img src="./assets/images/location-icon.png" alt="location-icon" class="location-icon"/>
+      </div>
+      <!--    <div>-->
+      <!--      <GenreBadge movie={movie} genres={genres}/>-->
+      <!--    </div>-->
+    </div>
+    <div class="list__item-description">{{movie.overview.length > 30 ? movie.overview.substring(0, movie.overview.indexOf('.')) + "..." : movie.overview}}</div>
+  </div>
+  <hr/>
+  <div class="item-container">
+    <div class="stars-container">
+      <!--    <StarsRating rating={movie.vote_average}/>-->
+    </div>
+    <div class="f-link">
+      <img src="./assets/images/f_letter.png" alt="f-icon"/>
+    </div>
+  </div>
+</div>
