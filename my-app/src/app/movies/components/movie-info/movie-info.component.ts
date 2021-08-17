@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {ResultsModel} from "../../../models/results.model";
 
 @Component({
@@ -14,7 +14,7 @@ export class MovieInfoComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(value => this.movie = value.moviesItemResolveService.state);
+    this.activatedRoute.data.subscribe(value => this.movie = value.moviesItemResolveService.state ? value.moviesItemResolveService.state : value.moviesItemResolveService);
   }
 
 }
