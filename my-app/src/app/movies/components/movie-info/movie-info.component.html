@@ -1,16 +1,19 @@
 <div class="movie__list-item">
-  <img src='{{"https://image.tmdb.org/t/p/w500/" + movie.poster_path}}' alt="movie-icon" style="width: 100%; height: 245px"/>
+  <img src='{{"https://image.tmdb.org/t/p/w500/" + (movie ? movie.poster_path : genresFromId.poster_path)}}' alt="movie-icon"
+       style="width:
+  100%; height:
+   245px"/>
   <div class="list__item-container">
-    <div class="list__item-title">{{movie.title}}</div>
+    <div class="list__item-title">{{movie ? movie.title : genresFromId.title}}</div>
     <div class="list__item-genres">
       <div>
         <img src="./assets/images/location-icon.png" alt="location-icon" class="location-icon"/>
       </div>
-      <!--    <div>-->
-      <!--      <GenreBadge movie={movie} genres={genres}/>-->
-      <!--    </div>-->
+      <div>
+        <app-genre-badge [genres]="genres" [movieGenres]="movie ? movie.genre_ids : genre_ids"></app-genre-badge>
+      </div>
     </div>
-    <div class="list__item-description">{{movie.overview.length > 30 ? movie.overview.substring(0, movie.overview.indexOf('.')) + "..." : movie.overview}}</div>
+    <div class="list__item-description">{{movie ? movie.overview : genresFromId.overview}}</div>
   </div>
   <hr/>
   <div class="item-container">

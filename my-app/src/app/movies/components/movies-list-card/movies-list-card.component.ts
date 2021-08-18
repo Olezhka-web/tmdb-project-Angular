@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MoviesService} from "../../services/movies.service";
 import {ResultsModel} from "../../../models/results.model";
+import {GenreModel} from "../../../models/genre.model";
 
 @Component({
   selector: 'app-movies-list-card',
@@ -14,6 +14,9 @@ export class MoviesListCardComponent implements OnInit {
 
   @Input()
   count: number;
+
+  @Input()
+  genres: GenreModel;
 
   constructor() { }
 

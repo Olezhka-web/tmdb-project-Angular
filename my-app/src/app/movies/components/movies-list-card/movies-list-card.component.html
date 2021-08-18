@@ -12,13 +12,13 @@
         <div>
           <img src="./assets/images/location-icon.png" alt="location-icon" class="location-icon"/>
         </div>
-        <!--    <div>-->
-        <!--      <GenreBadge movie={movie} genres={genres}/>-->
-        <!--    </div>-->
+        <div>
+          <app-genre-badge [genres]="genres" [movieGenres]="movie.genre_ids"></app-genre-badge>
+        </div>
       </div>
       <div class="list__item-description">{{movie.overview.length > 30 ? movie.overview.substring(0, movie.overview.indexOf('.')) + "..." : movie.overview}}</div>
     </div>
-
+  </a>
     <hr/>
     <div class="item-container">
       <div class="stars-container">
@@ -28,5 +28,4 @@
         <img src="./assets/images/f_letter.png" alt="f-icon"/>
       </div>
     </div>
-  </a>
 </div>

@@ -9,7 +9,7 @@
 <!--  </select>-->
   </div>
   <div class="wrapper-section">
-    <app-movies-list-card *ngFor="let movie of movies?.results; let count = index" [movie]="movie" [count]="count"></app-movies-list-card>
+    <app-movies-list-card *ngFor="let movie of movies?.results; let count = index" [movie]="movie" [count]="count" [genres]="genres"></app-movies-list-card>
   </div>
 </section>
 <app-movies-page></app-movies-page>

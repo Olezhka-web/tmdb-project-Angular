@@ -4,11 +4,12 @@ import {MoviesListComponent} from "./components/movies-list/movies-list.componen
 import {MoviesResolveService} from "./services/movies-resolve.service";
 import {MovieInfoComponent} from "./components/movie-info/movie-info.component";
 import {MoviesItemResolveService} from "./services/movies-item-resolve.service";
+import {GenresResolveService} from "./services/genres-resolve.service";
 
 const routes: Routes = [
-  {path: '', component: MoviesListComponent, resolve: {moviesResolveService: MoviesResolveService}, pathMatch: 'full' },
-  {path: ':id', component: MovieInfoComponent, resolve: {moviesItemResolveService: MoviesItemResolveService}},
-  {path: 'page/:id', component: MoviesListComponent, resolve: {moviesResolveService: MoviesResolveService} }
+  {path: '', component: MoviesListComponent, resolve: {moviesResolveService: MoviesResolveService, genresResolveService: GenresResolveService}, pathMatch: 'full' },
+  {path: ':id', component: MovieInfoComponent, resolve: {moviesItemResolveService: MoviesItemResolveService, genresResolveService: GenresResolveService}},
+  {path: 'page/:id', component: MoviesListComponent, resolve: {moviesResolveService: MoviesResolveService, genresResolveService: GenresResolveService} }
 ];
 
 @NgModule({

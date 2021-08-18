@@ -8,6 +8,7 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
 import {HttpClientModule} from "@angular/common/http";
 import {MoviesService} from "./services/movies.service";
 import {MoviesPageComponent} from "./components/movies-page/movies-page.component";
+import { GenreBadgeComponent } from './components/genre-badge/genre-badge.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {MoviesPageComponent} from "./components/movies-page/movies-page.componen
     MovieInfoComponent,
     MoviesListCardComponent,
     MoviesListComponent,
-    MoviesPageComponent
+    MoviesPageComponent,
+    GenreBadgeComponent
   ],
     imports: [
         CommonModule,

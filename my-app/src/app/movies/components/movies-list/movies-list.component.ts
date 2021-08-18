@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MoviesService} from "../../services/movies.service";
-import {MoviesModule} from "../../movies.module";
-import {ResultsModel} from "../../../models/results.model";
 import {MovieModel} from "../../../models/movie.model";
 import {ActivatedRoute} from "@angular/router";
+import {GenreModel} from "../../../models/genre.model";
 
 @Component({
   selector: 'app-movies-list',
@@ -13,11 +11,13 @@ import {ActivatedRoute} from "@angular/router";
 export class MoviesListComponent implements OnInit {
 
   movies: MovieModel;
+  genres: GenreModel;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(value => this.movies = value.moviesResolveService);
+    this.activatedRoute.data.subscribe(value => this.genres = value.genresResolveService);
   }
 
 }

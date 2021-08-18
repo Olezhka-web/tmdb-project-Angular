@@ -1,0 +1,5 @@
+<div class="genres" >
+  <div *ngFor="let item of movieGenreArr; let i = index">
+    {{i === movieGenreArr.length - 1 ? item : item + ',\u00A0'}}
+  </div>
+</div>
