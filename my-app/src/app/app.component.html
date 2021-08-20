@@ -1,2 +1,7 @@
 <app-header></app-header>
+<div class="loading-container" *ngIf="loading">
+  <img src="./assets/images/loading-icon.png" alt="loading-icon" class="loading-icon"/>
+  Page Loading
+</div>
 <router-outlet></router-outlet>
+

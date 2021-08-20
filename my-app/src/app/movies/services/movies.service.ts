@@ -15,11 +15,17 @@ export class MoviesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getMovies(pageId: number): Observable<MovieModel>{
-    return this.httpClient.get<MovieModel>(this._url + '&page=' + pageId);
+  getMovies(pageId: number, sortById: number | null): Observable<MovieModel>{
+    if(sortById && sortById != 0){
+      return this.httpClient.get<MovieModel>(this._url + '&page=' + pageId + '&with_genres=' + sortById);
+    }
+    else{
+      return this.httpClient.get<MovieModel>(this._url + '&page=' + pageId);
+    }
   }
 
   getMovie(id: number): Observable<ResultsModel>{
     return this.httpClient.get<ResultsModel>(this._urlGetMovie + id + `?api_key=${this.API_Key}`);
   }
+
 }

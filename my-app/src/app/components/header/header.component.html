@@ -1,7 +1,7 @@
-<header class="header__light">
+<header [ngClass]="checked ? 'header__dark' : 'header__light'">
   <div class="switcher__theme-container">
     <label class="switcher__theme-block">
-      <input type="checkbox" class="switcher__theme-checkbox"/>
+      <input type="checkbox" class="switcher__theme-checkbox" [(ngModel)]="checked" [checked]="checked" (change)="checkSwitcher()"/>
       <span class="switcher__theme-background"></span>
     </label>
   </div>
@@ -21,7 +21,7 @@
       <button class="search__icon-button"><img class="search-icon" src="./assets/images/Search_icon.png" alt="search-icon"/></button>
     </div>
     <div class="header__user-info">
-
+      <app-user-info></app-user-info>
     </div>
   </div>
 </header>

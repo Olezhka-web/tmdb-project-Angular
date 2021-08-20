@@ -10,6 +10,9 @@ import {MovieModel} from "../../../models/movie.model";
 export class MoviesPageComponent implements OnInit {
 
   @Input()
+  checked: boolean;
+
+  @Input()
   movieObj: MovieModel;
   pages: number[];
   totalPages: number;

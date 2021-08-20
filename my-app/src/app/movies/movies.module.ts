@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MoviesService} from "./services/movies.service";
 import {MoviesPageComponent} from "./components/movies-page/movies-page.component";
 import { GenreBadgeComponent } from './components/genre-badge/genre-badge.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,11 +20,12 @@ import { GenreBadgeComponent } from './components/genre-badge/genre-badge.compon
     MoviesPageComponent,
     GenreBadgeComponent
   ],
-    imports: [
-        CommonModule,
-        MoviesRoutingModule,
-        HttpClientModule
-    ],
+  imports: [
+    CommonModule,
+    MoviesRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
   providers: [MoviesService]
 })
 export class MoviesModule { }

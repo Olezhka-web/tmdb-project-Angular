@@ -5,10 +5,17 @@ a{
 .pages__container-light{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  padding: 20px 0;
 }
 
-.page__link-light{
+.pages__container-dark{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background: black;
+}
+
+.page__link-light, .page__link-dark{
   display: inline-block;
   margin-right: 15px;
 }
