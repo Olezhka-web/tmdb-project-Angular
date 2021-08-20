@@ -1,4 +1,4 @@
-<div class="movie__list-item">
+<div [ngClass]="checked ? 'movie__list-item--dark' : 'movie__list-item--light'">
   <img src='{{"https://image.tmdb.org/t/p/w500/" + (movie ? movie.poster_path : genresFromId.poster_path)}}' alt="movie-icon"
        style="width:
   100%; height:
