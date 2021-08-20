@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.dataCell.subscribe(value => console.log(value));
     localStorage.getItem('data-theme') === 'Dark' ? this.checked = true : this.checked = false;
   }
 
