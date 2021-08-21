@@ -13,7 +13,8 @@ export class StarsRatingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.currentRate = this.currentRate - 6;
+    this.currentRate = this.currentRate - 6;  // use minus 6 because from tmdb return data from 10 stars, or also I
+    // can use 4 * rating / 10
   }
 
 }
