@@ -6,7 +6,7 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DataService {
 
-  dataCell: BehaviorSubject<any> = new BehaviorSubject<any>(localStorage.getItem('data-theme') === 'Dark');
+  dataCell: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(localStorage.getItem('data-theme') === 'Dark');
 
   constructor() { }
 }
