@@ -10,6 +10,8 @@ import {MoviesService} from "./services/movies.service";
 import {MoviesPageComponent} from "./components/movies-page/movies-page.component";
 import { GenreBadgeComponent } from './components/genre-badge/genre-badge.component';
 import {FormsModule} from "@angular/forms";
+import {StarsRatingComponent} from "./components/stars-rating/stars-rating.component";
+import {NgbRatingModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import {FormsModule} from "@angular/forms";
     MoviesListCardComponent,
     MoviesListComponent,
     MoviesPageComponent,
-    GenreBadgeComponent
+    GenreBadgeComponent,
+    StarsRatingComponent
   ],
   imports: [
     CommonModule,
     MoviesRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbRatingModule
   ],
   providers: [MoviesService]
 })
